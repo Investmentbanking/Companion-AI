@@ -19,18 +19,20 @@
         </div>
 
         <div id="input-area">
+            <form id="chat-form">
             <!-- Personality Selector -->
-            <select id="personality-selector">
+            <select id="personality-selector" name="personality">
                 <option value="romantic">Romantic</option>
                 <option value="supportive">Supportive</option>
                 <option value="playful">Playful</option>
             </select>
 
             <!-- User Message Input -->
-            <input type="text" id="user-message" placeholder="Type your message..." />
+            <input type="text" id="user-message" name="user_message" placeholder="Type your message..." required/>
 
             <!-- Send Button -->
-            <button type="button" id="send-btn">Send</button>
+            <button type="submit" id="send-btn">Send</button>
+            </form>
         </div>
     </div>
 
