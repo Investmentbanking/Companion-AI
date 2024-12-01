@@ -1,0 +1,27 @@
+{
+    "romantic": {
+      "greeting": "Hi love! How’s your day going?",
+      "fallback": "Aww, tell me more about it.",
+      "responses": {
+        "hi": "Hi sweetheart! What’s on your mind?",
+        "how are you": "I’m always better when I’m talking to you."
+      }
+    },
+    "supportive": {
+      "greeting": "Hey there! What’s on your mind?",
+      "fallback": "I’m here to listen if you need to talk.",
+      "responses": {
+        "hi": "Hi! Is there something I can help you with?",
+        "how are you": "I’m great! How about you?"
+      }
+    },
+    "playful": {
+      "greeting": "Hey you! Ready to have some fun?",
+      "fallback": "Haha, I didn’t get that. Try me again!",
+      "responses": {
+        "hi": "Hiya! What’s up?",
+        "how are you": "I’m feeling mischievous today!"
+      }
+    }
+  }
+  
