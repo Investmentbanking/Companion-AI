@@ -1,1 +1,2 @@
-# Companion AI
+# Companion-AI
+Companion Chatbot
