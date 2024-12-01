@@ -44,7 +44,6 @@ def chat():
     if personality not in personalities:
         return jsonify({"response": "I don't understand this personality."})
 
-    
     responses = personalities[personality]
 
     if "hi" in user_input or "hello" in user_input:
