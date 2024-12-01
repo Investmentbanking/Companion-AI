@@ -3,27 +3,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content= "width=device-width, initial-scale=1.0" />
     <title>Companion Chatbot</title>
-    <link rel="stylesheet" href="Companion-AI/static/css/style.css"> <!-- Link to CSS file -->
+    <link rel="stylesheet" href="/static/css/style.css"> 
 </head>
 <body>
     <div id="container">
-        <h1>Companion-AI</h1>
-        <div id="window">
+        <header>
+            <h1>Companion-AI</h1>
+            <p>Companion-AI is here to assist you with anything you need. Talk to it as your companion</p>
+        </header>
+
+        <div id="chat-window">
             <div id="chat-history">
+
             </div>
-            <form id="chat-form">
-            <input type="text" id="user-message" placeholder="Type a message...">
-            <select id="personality-selecter">
+        </div>
+
+        <div id="input-area">
+            <!-- Personality Selector -->
+            <select id="personality-selector">
                 <option value="romantic">Romantic</option>
                 <option value="supportive">Supportive</option>
                 <option value="playful">Playful</option>
             </select>
-            <button type="submit">Send</button>
-            </form>
+
+            <!-- User Message Input -->
+            <input type="text" id="user-message" placeholder="Type your message..." />
+
+            <!-- Send Button -->
+            <button type="button" id="send-btn">Send</button>
         </div>
-        <div id="chat-output"></div>
     </div>
 
-    <script src="Companion-AI/static/js/script.js"></script>
+    <script src="/static/js/script.js"></script>
 </body>
 </html>

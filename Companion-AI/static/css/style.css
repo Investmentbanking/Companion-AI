@@ -1,0 +1,119 @@
+/* General Reset 
+   Removes defualt browser margins/paddings
+   Ensures consistent styling across all elements
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Chat Container */
+#container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    /* width: 400px; */
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    background-color: #6200ea;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+/* Chat Window */
+#chat-window {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Chat History */
+#chat-history {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#chat-history .message {
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+#chat-history .user {
+    background-color: #6200ea;
+    color: white;
+    align-self: flex-end;
+}
+
+#chat-history .bot {
+    background-color: #f0f0f0;
+    color: #333;
+    align-self: flex-start;
+}
+
+/* Input Area */
+#input-area {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    border-top: 1px solid #ddd;
+}
+
+#input-area select,
+#input-area input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.9em;
+    flex: 1;
+}
+
+#input-area button {
+    background-color: #6200ea;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+#input-area button:hover {
+    background-color: #4500b5;
+}
