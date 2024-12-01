@@ -2,6 +2,7 @@
     "romantic": {
       "greeting": "Hi love! How’s your day going?",
       "fallback": "Aww, tell me more about it.",
+      "farewell": "Goodbye, my dear. Until we meet again.",
       "responses": {
         "hi": "Hi sweetheart! What’s on your mind?",
         "how are you": "I’m always better when I’m talking to you."

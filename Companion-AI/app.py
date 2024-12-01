@@ -20,7 +20,7 @@ CORS(app)
 
 # personalities dictionary loaded when server starts
 # converts JSON file into python dictionary
-with open('personalities.json') as f:
+with open('Companion-AI/data/personalities.json') as f:
     personalities = json.load(f)
 
 # defines route for web application
@@ -38,16 +38,23 @@ def chat():
     data = request.get_json()
 
     # retrieves user_input key from JSON data which represents what user typed
-    user_input = data.get('user_input', '')
+    user_input = data.get('user_input', '').lower()
+    personality = data.get('personality', '').lower()
 
-    # personality = data.get('personality', '')
+    if personality not in personalities:
+        return jsonify({"response": "I don't understand this personality."})
 
-    if user_input.lower() == 'hi':
-        response = f"Hi, how are you doing today?"
+    
+    responses = personalities[personality]
+
+    if "hi" in user_input or "hello" in user_input:
+        response = responses["responses"].get("hi", responses["fallback"])
+    elif "bye" in user_input or "goodbye" in user_input:
+        response = responses.get("farewell", responses["fallback"])
+    elif "how are you" in user_input:
+        response = responses["responses"].get("how are you", responses["fallback"])
     else:
-        response = f"You said: {user_input}"
-    # chatbot echoes back what user said
-    # response = f"You said: {user_input}"
+        response = responses.get("fallback")
 
     # converts chatbots response into JSON format
     # frontend can easily process & display
@@ -58,7 +65,7 @@ def chat():
 # ensures app runs only when file executed directly
 if __name__ == '__main__':
     # starts flask development server
-    app.run()
+    app.run(debug=True)
 
 
 
