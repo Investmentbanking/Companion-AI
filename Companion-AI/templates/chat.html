@@ -1,0 +1,29 @@
+<!Doctype <html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content= "width=device-width, initial-scale=1.0" />
+    <title>Companion Chatbot</title>
+    <link rel="stylesheet" href="Companion-AI/static/css/style.css"> <!-- Link to CSS file -->
+</head>
+<body>
+    <div id="container">
+        <h1>Companion-AI</h1>
+        <div id="window">
+            <div id="chat-history">
+            </div>
+            <form id="chat-form">
+            <input type="text" id="user-message" placeholder="Type a message...">
+            <select id="personality-selecter">
+                <option value="romantic">Romantic</option>
+                <option value="supportive">Supportive</option>
+                <option value="playful">Playful</option>
+            </select>
+            <button type="submit">Send</button>
+            </form>
+        </div>
+        <div id="chat-output"></div>
+    </div>
+
+    <script src="Companion-AI/static/js/script.js"></script>
+</body>
+</html>

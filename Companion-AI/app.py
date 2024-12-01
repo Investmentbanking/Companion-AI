@@ -1,7 +1,7 @@
 # imports the main Flask class to create web application
 # request object gives access to data sent by the user like form inputs/JSON data
 # jsonify send data back to user in JSON format
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 
 # CORS ensures frontend can communicate with backend without browser restrictions
 from flask_cors import CORS
@@ -29,6 +29,10 @@ with open('Companion-AI/data/personalities.json') as f:
 @app.route('/')
 def hello_world():
     return "Hello World"
+
+@app.route('/chat', methods=['GET'])
+def chat_page():
+    return render_template('chat.html')
 
 # defines new endopint and specifies it accepts POST requests
 # used by frontend to send user messages to backend
