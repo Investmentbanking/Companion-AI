@@ -66,6 +66,8 @@ header p {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    /* overflow-y: auto;
+    max-height: 500px; */
 }
 
 #chat-history .message {

@@ -2,6 +2,7 @@ const chatForm = document.getElementById("chat-form")
 const userMessage = document.getElementById("user-message")
 const personalitySelector = document.getElementById("personality-selector")
 const chatHistory = document.getElementById("chat-history");
+const chatWindow = document.getElementById("chat-window");
 
 
 // Event listener listens for submit event and prevents default form submission using
@@ -23,6 +24,7 @@ chatForm.addEventListener("submit", function(event) {
     appendMessage(userMessageValue, "user")
 
     // creates object with users message and selected personality
+    // JS object
     const data = {
         user_input: userMessageValue,
         personality: personalitySelectorValue
@@ -48,6 +50,7 @@ chatForm.addEventListener("submit", function(event) {
             return response.json();
         })
         // appends chatbots response from backend to chat history
+        // data is the response object
         .then(data => {
             appendMessage(data.response, "bot");
         })
@@ -73,6 +76,12 @@ function appendMessage(message, sender) {
 
     chatHistory.appendChild(messageElement);
 
-    chatHistory.scrollTop = chatHistory.scrollHeight;
+    // setTimeout(() => {
+    //     chatHistory.scrollTop = chatHistory.scrollHeight;
+    // }, 0);
+
+    chatWindow.scrollTop = chatWindow.scrollHeight;
 }
+
+personalitySelector.addEventListener()
 
