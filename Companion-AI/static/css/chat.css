@@ -11,7 +11,7 @@
 
 /* Body Styling */
 body {
-    background-color: #f4f4f4;
+    background: linear-gradient(135deg, #7f00ff, #e100ff);
     color: #333;
     display: flex;
     justify-content: center;
@@ -36,7 +36,7 @@ body {
 
 /* Header */
 header {
-    background-color: #6200ea;
+    background-color: #e35df0;
     color: white;
     text-align: center;
     padding: 20px;
@@ -108,7 +108,7 @@ header p {
 }
 
 #input-area button {
-    background-color: #6200ea;
+    background-color: #dd60cc;
     color: white;
     padding: 10px 15px;
     border: none;

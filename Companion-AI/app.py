@@ -26,9 +26,13 @@ with open('Companion-AI/data/personalities.json') as f:
 # defines route for web application
 # route maps URL (/) to specific function
 # when user visits https://localhost:5000/ function below decorator will execute
-@app.route('/')
-def hello_world():
-    return "Hello World"
+# @app.route('/')
+# def hello_world():
+#     return "Hello World"
+
+@app.route('/', methods=['GET'])
+def home_page():
+    return render_template('home.html')
 
 @app.route('/chat', methods=['GET'])
 def chat_page():
