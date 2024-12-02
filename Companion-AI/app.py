@@ -49,19 +49,31 @@ def chat():
     user_input = data.get('user_input', '').lower()
     personality = data.get('personality', '').lower()
 
-    if personality not in personalities:
-        return jsonify({"response": "I don't understand this personality."})
+    # if personality not in personalities:
+    #     return jsonify({"response": "I don't understand this personality."})
 
     responses = personalities[personality]
 
-    if "hi" in user_input or "hello" in user_input:
-        response = responses["responses"].get("hi", responses["fallback"])
-    elif "bye" in user_input or "goodbye" in user_input:
-        response = responses.get("farewell", responses["fallback"])
-    elif "how are you" in user_input:
-        response = responses["responses"].get("how are you", responses["fallback"])
-    else:
-        response = responses.get("fallback")
+    response = None
+    for keyword, reply in responses["responses"].items():
+        if keyword in user_input:
+            response = reply
+            break
+
+    if not response:
+        if "bye" in user_input or "goodbye" in user_input:
+            response = responses.get("farewell", responses["fallback"])
+        else:
+            response = responses.get("fallback", "I didn’t quite catch that. Could you repeat?")
+
+    # if "hi" in user_input or "hello" in user_input:
+    #     response = responses["responses"].get("hi", responses["fallback"])
+    # elif "bye" in user_input or "goodbye" in user_input:
+    #     response = responses.get("farewell", responses["fallback"])
+    # elif "how are you" in user_input:
+    #     response = responses["responses"].get("how are you", responses["fallback"])
+    # else:
+    #     response = responses.get("fallback")
 
     # converts chatbots response into JSON format
     # frontend can easily process & display

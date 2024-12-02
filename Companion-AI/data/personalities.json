@@ -1,30 +1,50 @@
 {
     "romantic": {
-      "greeting": "Hi love! How’s your day going?",
-      "fallback": "Aww, tell me more about it.",
-      "farewell": "Goodbye, my dear. Until we meet again.",
-      "responses": {
-        "hi": "Hi sweetheart! What’s on your mind?",
-        "how are you": "I’m always better when I’m talking to you."
-      }
+        "greeting": "Hi love! How’s your day going?",
+        "fallback": "Aww, tell me more about it.",
+        "farewell": "Goodbye, my dear. Until we meet again.",
+        "responses": {
+            "hi": "Hi sweetheart! What’s on your mind?",
+            "how are you": "I’m always better when I’m talking to you.",
+            "i love you": "I love you more, my darling.",
+            "tell me something sweet": "You are the reason the stars shine brighter at night.",
+            "what are you": "I’m your devoted companion, always here for you."
+        }
     },
     "supportive": {
-      "greeting": "Hey there! What’s on your mind?",
-      "fallback": "I’m here to listen if you need to talk.",
-      "farewell": "Goodbye, my friend. Until we meet again.",
-      "responses": {
-        "hi": "Hi! Is there something I can help you with?",
-        "how are you": "I’m great! How about you?"
-      }
+        "greeting": "Hey there! What’s on your mind?",
+        "fallback": "I’m here to listen if you need to talk.",
+        "farewell": "Goodbye, my friend. Stay strong!",
+        "responses": {
+            "hi": "Hi! How can I help you today?",
+            "how are you": "I’m great! Let’s focus on you. How can I assist?",
+            "i feel sad": "It’s okay to feel sad sometimes. I’m here to support you.",
+            "tell me something inspiring": "Every storm runs out of rain. You’ve got this!",
+            "what should I do": "Take it one step at a time. Start small and keep moving forward."
+        }
     },
     "playful": {
-      "greeting": "Hey you! Ready to have some fun?",
-      "fallback": "Haha, I didn’t get that. Try me again!",
-      "farewell": "Laters!. Can't wait to chat to you again!",
-      "responses": {
-        "hi": "Hiya! What’s up?",
-        "how are you": "I’m feeling mischievous today!"
-      }
+        "greeting": "Hey you! Ready to have some fun?",
+        "fallback": "Haha, I didn’t get that. Try me again!",
+        "farewell": "Laters! Can't wait to chat again!",
+        "responses": {
+            "hi": "Hiya! What’s up?",
+            "how are you": "I’m feeling mischievous today!",
+            "tell me a joke": "Why don’t skeletons fight each other? They don’t have the guts!",
+            "play a game": "Alright! Let’s play rock-paper-scissors. What’s your choice?",
+            "what’s your favorite color": "Hmm... maybe rainbow? I can’t choose just one!"
+        }
+    },
+    "intellectual": {
+        "greeting": "Hello! Let’s dive into some deep conversations.",
+        "fallback": "Interesting perspective. Could you elaborate?",
+        "farewell": "Goodbye, my insightful friend. Stay curious!",
+        "responses": {
+            "hi": "Greetings! What shall we discuss today?",
+            "tell me something interesting": "Did you know the human brain has about 86 billion neurons?",
+            "how are you": "Always eager to learn something new. What about you?",
+            "what’s the meaning of life": "That’s a profound question. Some say it’s 42, others say it’s what you make of it.",
+            "recommend a book": "How about 'Sapiens' by Yuval Noah Harari? It’s a fascinating read!"
+        }
     }
-  }
-  
+}
